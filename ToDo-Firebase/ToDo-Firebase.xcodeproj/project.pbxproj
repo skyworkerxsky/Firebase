@@ -9,21 +9,23 @@
 /* Begin PBXBuildFile section */
 		49B9038C2372FC1400D0BE68 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49B9038B2372FC1400D0BE68 /* AppDelegate.swift */; };
 		49B9038E2372FC1400D0BE68 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49B9038D2372FC1400D0BE68 /* SceneDelegate.swift */; };
-		49B903902372FC1400D0BE68 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49B9038F2372FC1400D0BE68 /* ViewController.swift */; };
+		49B903902372FC1400D0BE68 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49B9038F2372FC1400D0BE68 /* LoginViewController.swift */; };
 		49B903932372FC1400D0BE68 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 49B903912372FC1400D0BE68 /* Main.storyboard */; };
 		49B903952372FC1500D0BE68 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 49B903942372FC1500D0BE68 /* Assets.xcassets */; };
 		49B903982372FC1500D0BE68 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 49B903962372FC1500D0BE68 /* LaunchScreen.storyboard */; };
+		49B903A12372FC8400D0BE68 /* TasksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49B903A02372FC8400D0BE68 /* TasksViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		49B903882372FC1400D0BE68 /* ToDo-Firebase.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ToDo-Firebase.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		49B9038B2372FC1400D0BE68 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		49B9038D2372FC1400D0BE68 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		49B9038F2372FC1400D0BE68 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		49B9038F2372FC1400D0BE68 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		49B903922372FC1400D0BE68 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		49B903942372FC1500D0BE68 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		49B903972372FC1500D0BE68 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		49B903992372FC1500D0BE68 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		49B903A02372FC8400D0BE68 /* TasksViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TasksViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -37,6 +39,13 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		49270B5F2374078000550ED8 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		49B9037F2372FC1400D0BE68 = {
 			isa = PBXGroup;
 			children = (
@@ -56,15 +65,25 @@
 		49B9038A2372FC1400D0BE68 /* ToDo-Firebase */ = {
 			isa = PBXGroup;
 			children = (
+				49270B5F2374078000550ED8 /* Model */,
+				49B9039F2372FC5100D0BE68 /* VC */,
 				49B9038B2372FC1400D0BE68 /* AppDelegate.swift */,
 				49B9038D2372FC1400D0BE68 /* SceneDelegate.swift */,
-				49B9038F2372FC1400D0BE68 /* ViewController.swift */,
 				49B903912372FC1400D0BE68 /* Main.storyboard */,
 				49B903942372FC1500D0BE68 /* Assets.xcassets */,
 				49B903962372FC1500D0BE68 /* LaunchScreen.storyboard */,
 				49B903992372FC1500D0BE68 /* Info.plist */,
 			);
 			path = "ToDo-Firebase";
+			sourceTree = "<group>";
+		};
+		49B9039F2372FC5100D0BE68 /* VC */ = {
+			isa = PBXGroup;
+			children = (
+				49B9038F2372FC1400D0BE68 /* LoginViewController.swift */,
+				49B903A02372FC8400D0BE68 /* TasksViewController.swift */,
+			);
+			path = VC;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,7 +157,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				49B903902372FC1400D0BE68 /* ViewController.swift in Sources */,
+				49B903902372FC1400D0BE68 /* LoginViewController.swift in Sources */,
+				49B903A12372FC8400D0BE68 /* TasksViewController.swift in Sources */,
 				49B9038C2372FC1400D0BE68 /* AppDelegate.swift in Sources */,
 				49B9038E2372FC1400D0BE68 /* SceneDelegate.swift in Sources */,
 			);
