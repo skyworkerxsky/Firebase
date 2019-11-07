@@ -42,11 +42,17 @@
                                         <subviews>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="E-mail" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="IME-e7-55z">
                                                 <rect key="frame" x="0.0" y="0.0" width="244" height="42.5"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="244" id="Lx3-5K-UEu"/>
+                                                </constraints>
                                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xbh-Tg-yrt">
                                                 <rect key="frame" x="0.0" y="50.5" width="244" height="42.5"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="244" id="8WP-XX-GiT"/>
+                                                </constraints>
                                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                                 <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                             </textField>
@@ -61,7 +67,6 @@
                                                 <state key="normal" title="Войти"/>
                                                 <connections>
                                                     <action selector="loginTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="bsj-qR-27b"/>
-                                                    <segue destination="NAd-Ak-96t" kind="show" identifier="tasksSegue" id="XWr-lp-Kr3"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YCJ-pC-bPK">
@@ -76,9 +81,11 @@
                                     </stackView>
                                 </subviews>
                                 <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="sHa-Qn-Nek" secondAttribute="trailing" id="4yh-e0-QoW"/>
                                     <constraint firstAttribute="trailing" secondItem="db6-bm-yqL" secondAttribute="trailing" id="Fwd-nk-svy"/>
                                     <constraint firstItem="db6-bm-yqL" firstAttribute="leading" secondItem="XzO-9o-MeA" secondAttribute="leading" id="PTB-Ry-iEX"/>
                                     <constraint firstAttribute="trailing" secondItem="3tX-Ea-RsK" secondAttribute="trailing" id="UQg-g9-Nw4"/>
+                                    <constraint firstItem="sHa-Qn-Nek" firstAttribute="leading" secondItem="XzO-9o-MeA" secondAttribute="leading" id="fSh-RW-5ju"/>
                                     <constraint firstItem="3tX-Ea-RsK" firstAttribute="leading" secondItem="XzO-9o-MeA" secondAttribute="leading" id="pVB-OK-efF"/>
                                 </constraints>
                             </stackView>
@@ -94,6 +101,7 @@
                         <outlet property="emailTF" destination="IME-e7-55z" id="0rR-MP-Xz1"/>
                         <outlet property="passwordTF" destination="xbh-Tg-yrt" id="vEn-0s-HOh"/>
                         <outlet property="warningLabel" destination="86F-on-sS9" id="Wej-1n-lbh"/>
+                        <segue destination="NAd-Ak-96t" kind="show" identifier="tasksSegue" id="Ejv-wY-Ief"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -139,6 +147,11 @@
                         <viewLayoutGuide key="safeArea" id="iOY-8N-lEU"/>
                     </view>
                     <navigationItem key="navigationItem" title="Задачи" id="Nei-ce-SFt">
+                        <barButtonItem key="leftBarButtonItem" title="Выйти" id="Mkr-fe-P8N">
+                            <connections>
+                                <action selector="signOutTapped:" destination="pP7-Jd-rt1" id="vUX-fZ-9dW"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="ARz-UG-dB4">
                             <connections>
                                 <action selector="addTapped:" destination="pP7-Jd-rt1" id="xdV-su-1KF"/>
