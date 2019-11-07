@@ -11,7 +11,7 @@
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="LoginViewController" customModule="ToDo_Firebase" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC" customClass="UIScrollView">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -29,7 +29,7 @@
                                                 <color key="shadowColor" red="0.15546423994724792" green="0.15700348984771573" blue="0.15700348984771573" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <size key="shadowOffset" width="2" height="2"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Неверный пользователь или пароль" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="86F-on-sS9">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Неверный пользователь или пароль" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="86F-on-sS9">
                                                 <rect key="frame" x="0.0" y="46.5" width="244" height="46.5"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <color key="textColor" red="0.79402399289099523" green="0.13681421445506958" blue="0.2598980419047498" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -76,17 +76,17 @@
                                     </stackView>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstItem="db6-bm-yqL" firstAttribute="leading" secondItem="XzO-9o-MeA" secondAttribute="leading" id="a0d-hg-cAz"/>
-                                    <constraint firstAttribute="trailing" secondItem="3tX-Ea-RsK" secondAttribute="trailing" id="kLf-zb-yD8"/>
-                                    <constraint firstAttribute="trailing" secondItem="db6-bm-yqL" secondAttribute="trailing" id="kTq-aK-Trk"/>
-                                    <constraint firstItem="3tX-Ea-RsK" firstAttribute="leading" secondItem="XzO-9o-MeA" secondAttribute="leading" id="uBd-G4-uXV"/>
+                                    <constraint firstAttribute="trailing" secondItem="db6-bm-yqL" secondAttribute="trailing" id="Fwd-nk-svy"/>
+                                    <constraint firstItem="db6-bm-yqL" firstAttribute="leading" secondItem="XzO-9o-MeA" secondAttribute="leading" id="PTB-Ry-iEX"/>
+                                    <constraint firstAttribute="trailing" secondItem="3tX-Ea-RsK" secondAttribute="trailing" id="UQg-g9-Nw4"/>
+                                    <constraint firstItem="3tX-Ea-RsK" firstAttribute="leading" secondItem="XzO-9o-MeA" secondAttribute="leading" id="pVB-OK-efF"/>
                                 </constraints>
                             </stackView>
                         </subviews>
-                        <color key="backgroundColor" red="0.68621319532394409" green="0.68631380796432495" blue="0.68619120121002197" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.73168120864398212" green="0.79381146823147153" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="XzO-9o-MeA" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="4a7-qT-MGo"/>
-                            <constraint firstItem="XzO-9o-MeA" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="n2r-CN-fHZ"/>
+                            <constraint firstItem="XzO-9o-MeA" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="2Ls-BT-wYg"/>
+                            <constraint firstItem="XzO-9o-MeA" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="3qo-wP-QzS"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>

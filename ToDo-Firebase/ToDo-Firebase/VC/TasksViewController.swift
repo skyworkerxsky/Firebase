@@ -27,7 +27,7 @@ class TasksViewController: UIViewController, UITableViewDataSource, UITableViewD
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
         cell.backgroundColor = .clear
-        cell.textLabel?.textColor = #colorLiteral(red: 0.6612872178, green: 1, blue: 0.5819273426, alpha: 1)
+        cell.textLabel?.textColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
         cell.textLabel?.text = "Cell number \(indexPath.row)"
         
         return cell
