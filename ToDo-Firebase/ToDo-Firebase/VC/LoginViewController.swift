@@ -79,8 +79,9 @@ class LoginViewController: UIViewController {
     
     // MARK: Actions
     @IBAction func loginTapped(_ sender: UIButton) {
+        // Проверка на пустые поля
         guard let email = emailTF.text, let password = passwordTF.text, email != "", password != "" else {
-            displayWarningLabel(withText: "Info is incorrect")
+            displayWarningLabel(withText: "Info is incorrect") // Отображаем warning label если одно из полей пустое
             return
         }
         
@@ -101,6 +102,7 @@ class LoginViewController: UIViewController {
     }
     
     @IBAction func registerTapped(_ sender: UIButton) {
+        // Проверка на пустые поля
         guard let email = emailTF.text, let password = passwordTF.text, email != "", password != "" else {
             displayWarningLabel(withText: "Info is incorrect")
             return
