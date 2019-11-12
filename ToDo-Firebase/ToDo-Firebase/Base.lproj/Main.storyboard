@@ -169,14 +169,17 @@
         <!--Navigation Controller-->
         <scene sceneID="1MQ-ql-4Ql">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="NAd-Ak-96t" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" modalPresentationStyle="fullScreen" id="NAd-Ak-96t" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="BqR-ii-icf"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="7O8-rv-Cos">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="56"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
+                    <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Vnz-fI-vYa">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </toolbar>
                     <connections>
                         <segue destination="pP7-Jd-rt1" kind="relationship" relationship="rootViewController" id="GOi-Bh-azr"/>
                     </connections>
