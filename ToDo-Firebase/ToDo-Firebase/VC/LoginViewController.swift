@@ -13,6 +13,7 @@ class LoginViewController: UIViewController {
     
     // MARK: Advanced properties
     let segueIdentifier = "tasksSegue"
+    var ref: DatabaseReference!
     
     // MARK: Outlets
     @IBOutlet weak var warningLabel: UILabel!
@@ -21,6 +22,8 @@ class LoginViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        ref = Database.database().reference(withPath: "users")
         
         // Поднимаем экран при вызове клавиатуры
         NotificationCenter.default.addObserver(self, selector: #selector(kbDidShow), name: UIResponder.keyboardDidShowNotification, object: nil)
@@ -102,23 +105,25 @@ class LoginViewController: UIViewController {
     }
     
     @IBAction func registerTapped(_ sender: UIButton) {
+        
         // Проверка на пустые поля
         guard let email = emailTF.text, let password = passwordTF.text, email != "", password != "" else {
             displayWarningLabel(withText: "Info is incorrect")
             return
         }
         
-        Auth.auth().createUser(withEmail: email, password: password) { (user, error) in
-            if error == nil {
-                if user != nil {
-                   
-                } else {
-                    print("User is not created")
-                }
-            } else {
-                print (error!.localizedDescription)
+        Auth.auth().createUser(withEmail: email, password: password) { [weak self] (user, error) in
+            
+            guard error == nil, user != nil else {
+                print(error!.localizedDescription)
+                return
             }
+            
+            let userRef = self?.ref.child((user?.user.uid)!)
+            userRef?.setValue(["email": user?.user.email])
+            
         }
+        
     }
 
 }

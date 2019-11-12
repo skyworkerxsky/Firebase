@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -15,6 +15,8 @@
 		49B903952372FC1500D0BE68 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 49B903942372FC1500D0BE68 /* Assets.xcassets */; };
 		49B903982372FC1500D0BE68 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 49B903962372FC1500D0BE68 /* LaunchScreen.storyboard */; };
 		49B903A12372FC8400D0BE68 /* TasksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49B903A02372FC8400D0BE68 /* TasksViewController.swift */; };
+		49BC94682379FEC80028B710 /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49BC94672379FEC80028B710 /* Task.swift */; };
+		49BC946A2379FECF0028B710 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49BC94692379FECF0028B710 /* User.swift */; };
 		67DE1B5116B6EC0F25106212 /* Pods_ToDo_Firebase.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A298E257AA7813AA60E668B /* Pods_ToDo_Firebase.framework */; };
 /* End PBXBuildFile section */
 
@@ -30,6 +32,8 @@
 		49B903972372FC1500D0BE68 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		49B903992372FC1500D0BE68 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		49B903A02372FC8400D0BE68 /* TasksViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TasksViewController.swift; sourceTree = "<group>"; };
+		49BC94672379FEC80028B710 /* Task.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
+		49BC94692379FECF0028B710 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		8A298E257AA7813AA60E668B /* Pods_ToDo_Firebase.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ToDo_Firebase.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B208819B56E6BE2EE771F3F5 /* Pods-ToDo-Firebase.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ToDo-Firebase.debug.xcconfig"; path = "Target Support Files/Pods-ToDo-Firebase/Pods-ToDo-Firebase.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -49,6 +53,8 @@
 		49270B5F2374078000550ED8 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				49BC94672379FEC80028B710 /* Task.swift */,
+				49BC94692379FECF0028B710 /* User.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -118,7 +124,6 @@
 				B208819B56E6BE2EE771F3F5 /* Pods-ToDo-Firebase.debug.xcconfig */,
 				148E7516E42B6A22F3A7A9B7 /* Pods-ToDo-Firebase.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -240,6 +245,8 @@
 			files = (
 				49B903902372FC1400D0BE68 /* LoginViewController.swift in Sources */,
 				49B903A12372FC8400D0BE68 /* TasksViewController.swift in Sources */,
+				49BC946A2379FECF0028B710 /* User.swift in Sources */,
+				49BC94682379FEC80028B710 /* Task.swift in Sources */,
 				49B9038C2372FC1400D0BE68 /* AppDelegate.swift in Sources */,
 				49B9038E2372FC1400D0BE68 /* SceneDelegate.swift in Sources */,
 			);
