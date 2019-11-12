@@ -61,10 +61,39 @@ class TasksViewController: UIViewController, UITableViewDataSource, UITableViewD
         cell.backgroundColor = .clear
         cell.textLabel?.textColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
         
-        let taskTitle = tasks[indexPath.row].title // Получаем заголовки
+        let task = tasks[indexPath.row]
+        let taskTitle = task.title // Получаем заголовки
+        let isCompleted = task.completed
         cell.textLabel?.text = taskTitle
+        toogleCompletion(cell, isCompleted: isCompleted)
         
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
+        return true
+    }
+    
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete {
+            let task = tasks[indexPath.row]
+            task.ref?.removeValue()
+        }
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        guard let cell = tableView.cellForRow(at: indexPath) else { return }
+        let task = tasks[indexPath.row]
+        let isCompleted = !task.completed
+        
+        toogleCompletion(cell, isCompleted: isCompleted)
+        task.ref?.updateChildValues(["completed": isCompleted])
+        
+        print("check")
+    }
+    
+    func toogleCompletion(_ cell: UITableViewCell, isCompleted: Bool) {
+        cell.accessoryType = isCompleted ? .checkmark : .none
     }
     
     // MARK: Actions
